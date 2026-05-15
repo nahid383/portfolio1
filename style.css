@@ -70,3 +70,24 @@ header{
     pointer-events: none;
     z-index: 1000;
 }
+
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 2rem 0;
+    z-index: 1000;
+    /* transform: translateX(150%); */
+}
+
+nav a{
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    border: 5px solid var(--secondary);
+    border-radius: 10px;
+    text-decoration: none;
+}
