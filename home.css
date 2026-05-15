@@ -9,11 +9,12 @@
 }
 
 .img-container{
-    width: 270px;
-    height: 270px;
+    width: 370px;
+    height: 370px;
     border-radius: 50%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
