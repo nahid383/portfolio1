@@ -32,7 +32,7 @@ body.no-scroll{
     max-width: 700px;
     padding: 1rem;
     margin: 0 auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 header{
@@ -160,5 +160,40 @@ nav a{
         gap: 1.5 rem;
         position: static;
         transform: translateX(0);
+    }
+
+    nav a{
+        padding: 0;
+        font-size: 1.5 rem;
+        border: none;
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    nav a:hover {
+        color: var(--green);
+    }
+}
+
+@media screen and (width>=1250px){
+    .main-container{
+        max-width: 1200px;
+    }
+
+    .brand-info img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .brand-info h2{
+        font-size: 3rem;
+    }
+
+    nav{
+        gap: 2.5rem;
+    }
+
+    nav a{
+        font-size: 2 rem;
     }
 }
