@@ -9,12 +9,41 @@
 }
 
 .img-container{
-    width: 370px;
-    height: 370px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+.img-container::before, .img-container::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: conic-gradient(transparent, transparent, transparent, var(--green));
+    animation: revolve 4s linear infinite;
+}
+
+.img-container::after{
+    animation-delay: 2s;
+}
+
+@keyframes revolve{
+    from{
+        transform: rotate(0deg);
+    } to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.img-container img{
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
 }
