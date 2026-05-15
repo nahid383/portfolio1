@@ -28,3 +28,13 @@ body, html{
     margin: 0 auto;
     border: 2px solid red;
 }
+
+header{
+    display: flex;
+}
+
+.brand-info img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
