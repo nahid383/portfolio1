@@ -83,6 +83,10 @@ nav{
     /* transform: translateX(150%); */
 }
 
+#menu-toggle:checked ~ nav{
+    transform: translateX(0%);
+}
+
 nav a{
     text-align: center;
     padding: 0.8rem;
@@ -90,4 +94,12 @@ nav a{
     border: 5px solid var(--secondary);
     border-radius: 10px;
     text-decoration: none;
+    color: var(--white);
+    opacity: 0;
+    transform: translateX(150%);
+}
+
+#menu-toggle:checked ~ nav a{
+    opacity: 1;
+    transform: translateX(0%);
 }
