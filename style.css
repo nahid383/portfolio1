@@ -20,6 +20,12 @@ body, html{
     color: var(--white);
     min-height: 100dvh;
     overflow-x: hidden;
+    transition: all 03s ease;
+}
+
+body.no-scroll{
+    height: 100dvh;
+    overflow: hidden;
 }
 
 .main-container{
@@ -71,6 +77,17 @@ header{
     z-index: 1000;
 }
 
+#menu-toggle:checked ~ #overlay{
+    display: block;
+    position: fixed;
+    inset: 0;
+    top: 7rem;
+    height: 100dvh;
+    background: var(--primary);
+    opacity: 1;
+    pointer-events: none;
+}
+
 nav{
     display: flex;
     flex-direction: column;
@@ -97,9 +114,11 @@ nav a{
     color: var(--white);
     opacity: 0;
     transform: translateX(150%);
+    transition: all 0.4s ease;
 }
 
 #menu-toggle:checked ~ nav a{
     opacity: 1;
     transform: translateX(0%);
+    transition-delay: calc(var(--i)*0.2s);
 }
