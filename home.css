@@ -65,6 +65,37 @@
     white-space: nowrap;
 }
 
+.details h3{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.details h3 span{
+    color: var(--green);
+    display: inline-block;
+    min-width: 130px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.details h3 span::after{
+    content: "|";
+    margin-left: 5px;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink{
+    0%, 100%{
+        opacity: 1;
+    } 50%{
+        opacity: 0;
+    }
+}
+
 .details p{
     font-size: 1.3rem;
     text-align: justify;
@@ -91,13 +122,17 @@
         line-height: 1.1;
     }
 
+    .details h3{
+        font-size: 2.5rem;
+    }
+
     .details p{
         font-size: 1.1rem;
     }
 
     .img-container{
         width: 375px;
-        height: 305px;
+        height: 375px;
         flex-shrink: 0;
         margin-left: auto;
     }
@@ -119,6 +154,10 @@
 
     .details h2{
         font-size: clamp(4rem, 6vw, 6rem);
+    }
+
+    .details h3{
+        font-size: 2.8rem;
     }
 
     .details p{
