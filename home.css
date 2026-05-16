@@ -83,6 +83,7 @@
     .details{
         flex: 1;
         min-width: 0;
+        max-width: 60%;
     }
 
     .details h2{
@@ -95,9 +96,10 @@
     }
 
     .img-container{
-        width: 350px;
-        height: 350px;
+        width: 375px;
+        height: 305px;
         flex-shrink: 0;
+        margin-left: auto;
     }
 }
 

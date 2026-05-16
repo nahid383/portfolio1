@@ -127,11 +127,13 @@ nav a{
 
 @media screen and (width>=1024px){
     .main-container{
-        max-width: 950px;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     header{
         position: static;
+        width: 100%;
     }
 
     .brand-info{
@@ -181,7 +183,7 @@ nav a{
 
 @media screen and (width>=1250px){
     .main-container{
-        max-width: 1200px;
+        max-width: 100%;
     }
 
     .brand-info img{
