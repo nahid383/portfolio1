@@ -48,3 +48,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (typingText) type();
 });
+
+const navlinks = document.querySelectorAll(".navlink");
+const tabs = document.querySelectorAll(".content");
+
+navlinks.forEach((link)=>{
+    link.addEventListener('click', (e)=>{
+        e.preventDefault();
+
+        link.classList.add("active");
+
+        navlinks.forEach((l)=>l.classList.remove
+        ("active"));
+
+        console.log(link.dataset.tab);
+
+        const tabName = link.dataset.tab;
+
+        tabs.forEach((tab)=>{
+            if(tab.id === tabName){
+                tab.classList.add("active");
+            } else{
+                tab.classList.remove("active");
+            }
+        });
+    });
+});
