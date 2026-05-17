@@ -65,6 +65,15 @@
     white-space: nowrap;
 }
 
+.details h2 span{
+    background: linear-gradient(to right, var(--green), var(--white));
+    padding-bottom: 2px;
+    border-bottom: 5px solid var(--green);
+    color: transparent;
+
+    -webkit-background-clip: text;
+}
+
 .details h3{
     font-size: 2rem;
     display: flex;
@@ -99,6 +108,12 @@
 .details p{
     font-size: 1.3rem;
     text-align: justify;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 @media screen and (min-width: 768px){
