@@ -26,17 +26,17 @@
                 <label for="menu-toggle" id="overlay">Close</label>
 
             <nav>
-                <a href="#" style="--i:1">Home</a>
-                <a href="#" style="--i:2">About</a>
-                <a href="#" style="--i:3">Projects</a>
-                <a href="#" style="--i:4">Skills</a>
-                <a href="#" style="--i:5">Achievements</a>
-                <a href="#" style="--i:6">Contact</a>
+                <a href="#" style="--i:1" data-tab="home" class="navlink active">Home</a>
+                <a href="#" style="--i:2" data-tab="about" class="navlink">About</a>
+                <a href="#" style="--i:3" data-tab="projects" class="navlink">Projects</a>
+                <a href="#" style="--i:4" data-tab="skills" class="navlink">Skills</a>
+                <a href="#" style="--i:5" data-tab="achievements" class="navlink">Achievements</a>
+                <a href="#" style="--i:6" data-tab="contact" class="navlink">Contact</a>
             </nav>
             </div>
         </header>
 
-        <section class="home">
+        <section id="home" class="content active">
             <div class="details">
                 <h2>
                     <span>Md. Nahid</span> 
@@ -90,6 +90,11 @@
             </div>
         </section>
 
+        <section id="about" class="content">About</section>
+        <section id="projects" class="content">Projects</section>
+        <section id="skills" class="content">Skills</section>
+        <section id="achievements" class="content">Achievements</section>
+        <section id="contact" class="content">Contact</section>
     </div>
 
     <script src="script.js" defer></script>
