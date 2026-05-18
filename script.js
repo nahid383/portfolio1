@@ -56,10 +56,14 @@ navlinks.forEach((link)=>{
     link.addEventListener('click', (e)=>{
         e.preventDefault();
 
-        link.classList.add("active");
+        navlinks.forEach((l) => l.classList.remove("active"));
 
-        navlinks.forEach((l)=>l.classList.remove
-        ("active"));
+        link.classList.add("active");
+        
+        
+
+        // navlinks.forEach((l)=>l.classList.remove
+        // ("active"));
 
         console.log(link.dataset.tab);
 
