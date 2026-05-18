@@ -147,6 +147,17 @@
 .social-icons a{
     color: var(--white);
     transition: all ease 0.3s;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.social-icons a i{
+    font-size: 3.9rem;
 }
 
 .social-icons a:hover{
