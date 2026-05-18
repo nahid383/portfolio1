@@ -120,7 +120,7 @@ nav a.active::after {
 }
 
 .details h2 {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     line-height: 1.1;
 }
 
@@ -158,9 +158,9 @@ nav a.active::after {
 /* ⭐ FIXED PARAGRAPH (RESTORED ORIGINAL LOOK) */
 .details p {
     margin-top: 15px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 1.8;
-    max-width: 650px;
+    max-width: 850px;
     text-align: justify;
     color: #cfd3dc;
     word-spacing: 0.5px;
@@ -236,39 +236,51 @@ nav a.active::after {
     border-radius: 50%;
 }
 
-/* OUTER CURVE (LIGHTER + CLEAN) */
+
+/* ================= PROFILE IMAGE CONTAINER ================= */
+.img-container {
+    width: 340px;
+    height: 340px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* ================= OUTER CURVE (TOP START) ================= */
 .img-container::before {
     content: "";
     position: absolute;
-    width: 108%;
-    height: 108%;
+    inset: -6px;
     border-radius: 50%;
     background: conic-gradient(
+        from 0deg,
         transparent 0deg,
-        transparent 315deg,
+        transparent 280deg,
         var(--green) 360deg
     );
-    animation: spin1 3.8s linear infinite;
-    opacity: 0.9;
+    animation: spin 3.5s linear infinite;
+    opacity: 1;
 }
 
-/* INNER CURVE (SOFT + BALANCED) */
+/* ================= INNER CURVE (BOTTOM START) ================= */
 .img-container::after {
     content: "";
     position: absolute;
-    width: 102%;
-    height: 102%;
+    inset: -10px;
     border-radius: 50%;
     background: conic-gradient(
+        from 180deg,
         transparent 0deg,
-        transparent 320deg,
+        transparent 280deg,
         var(--green) 360deg
     );
-    animation: spin2 3.2s linear infinite reverse;
-    opacity: 0.6;
+    animation: spin 3.5s linear infinite;
+    opacity: 1;
 }
 
-/* IMAGE (CLEAN + SAFE RATIO) */
+/* ================= PROFILE IMAGE ================= */
 .img-container img {
     width: 92%;
     height: 92%;
@@ -278,15 +290,10 @@ nav a.active::after {
     z-index: 10;
 }
 
-/* ANIMATIONS */
-@keyframes spin1 {
+/* ================= ANIMATION (SAME SPEED + SAME DIRECTION) ================= */
+@keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
-}
-
-@keyframes spin2 {
-    from { transform: rotate(360deg); }
-    to { transform: rotate(0deg); }
 }
 
 /* MOBILE */
@@ -323,5 +330,16 @@ nav a.active::after {
 
     .bottom {
         justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .hero-section {
+        justify-content: space-between;
+    }
+
+    .img-container {
+        transform: translateX(-80px);
     }
 }
