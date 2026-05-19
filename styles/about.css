@@ -1,3 +1,4 @@
+
 /* ================= ABOUT PAGE ================= */
 
 .about-section {
@@ -7,88 +8,30 @@
     color: var(--white);
 }
 
-/* MAIN LAYOUT */
+/* ================= MAIN LAYOUT (NO IMAGE) ================= */
 .about-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 4rem;
-}
-
-/* ================= IMAGE (RIGHT SIDE FINAL) ================= */
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    position: sticky;
-    top: 120px;
-
-    /* FIX: push image to right side */
-    order: 2;
-}
-
-/* glowing rings */
-.about-image::before,
-.about-image::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    animation: spin 5s linear infinite;
-}
-
-.about-image::before {
-    width: 360px;
-    height: 360px;
-    background: conic-gradient(
-        from 0deg,
-        transparent 0deg,
-        transparent 280deg,
-        var(--green) 360deg
-    );
-}
-
-.about-image::after {
-    width: 390px;
-    height: 390px;
-    background: conic-gradient(
-        from 180deg,
-        transparent 0deg,
-        transparent 280deg,
-        var(--green) 360deg
-    );
-}
-
-/* PROFILE IMAGE */
-.about-image img {
-    width: 340px;
-    height: 340px;
-    border-radius: 50%;
-    object-fit: cover;
-    position: relative;
-    z-index: 10;
-    border: 6px solid #08111f;
+    display: block;
 }
 
 /* ================= CONTENT ================= */
 .about-content {
-    order: 1;   /* FIX: content goes left */
-    flex: 2;
+    width: 100%;
 }
 
+/* HEADINGS (IMPROVED SIZE) */
 .about-content h4 {
     color: var(--green);
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .about-content h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 15px;
 }
 
 .about-content h3 {
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     margin-bottom: 20px;
 }
 
@@ -96,9 +39,10 @@
     color: var(--green);
 }
 
+/* PARAGRAPH (BIGGER + READABLE) */
 .about-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.45rem;
+    line-height: 1.9;
     color: #d6d6d6;
     margin-bottom: 15px;
     text-align: justify;
@@ -106,15 +50,15 @@
 
 /* ================= CARDS ================= */
 .about-cards {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
 }
 
 .card {
     background: rgba(255, 255, 255, 0.05);
-    padding: 1.8rem;
+    padding: 2rem;
     border-radius: 18px;
     border: 1px solid rgba(124, 240, 61, 0.2);
     transition: 0.3s ease;
@@ -127,31 +71,30 @@
 }
 
 .card i {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--green);
     margin-bottom: 10px;
 }
 
 .card h2 {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
+    font-size: 1.8rem;
 }
 
 .card p {
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 /* ================= PERSONAL INFO ================= */
 .personal-info {
     margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
 }
 
 .info-box {
     background: rgba(255, 255, 255, 0.04);
-    padding: 1rem 1.2rem;
+    padding: 1.2rem 1.4rem;
     border-left: 4px solid var(--green);
     border-radius: 10px;
     transition: 0.3s ease;
@@ -165,9 +108,11 @@
 .info-box span {
     color: var(--green);
     font-weight: 600;
+    font-size: 1.4rem;
 }
 
 .info-box p {
+    font-size: 1.3rem;
     margin-top: 5px;
 }
 
@@ -177,14 +122,14 @@
 }
 
 .education h2 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     color: var(--green);
     margin-bottom: 1.5rem;
 }
 
 .edu-box {
     background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
+    padding: 1.7rem;
     border-radius: 15px;
     margin-bottom: 1rem;
     border: 1px solid rgba(124, 240, 61, 0.15);
@@ -197,12 +142,11 @@
 }
 
 .edu-box h3 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
 }
 
-.edu-box span {
-    color: var(--green);
+.edu-box p {
+    font-size: 1.1rem;
 }
 
 /* ================= GOAL ================= */
@@ -215,73 +159,35 @@
 }
 
 .goal-section h2 {
+    font-size: 2.4rem;
     color: var(--green);
     margin-bottom: 10px;
+}
+
+.goal-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 /* ================= BUTTON ================= */
 .btn {
     margin-top: 2rem;
     display: inline-block;
-}
-
-/* ================= ANIMATION ================= */
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    font-size: 1.2rem;
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
 
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .about-content h1 {
+        font-size: 3rem;
     }
 
-    .about-image {
-        justify-content: center;
-        position: relative;
-        margin-bottom: 2rem;
-        order: unset;
-    }
-
-    .about-content {
-        order: unset;
+    .about-content h3 {
+        font-size: 1.8rem;
     }
 
     .about-content p {
         text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .about-image img {
-        width: 240px;
-        height: 240px;
-    }
-
-    .about-image::before {
-        width: 270px;
-        height: 270px;
-    }
-
-    .about-image::after {
-        width: 300px;
-        height: 300px;
-    }
-
-    .about-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .about-content h3 {
-        font-size: 1.4rem;
     }
 }
