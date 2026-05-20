@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | Nahid Hasan</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="projects.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Projects | Md. Nahid Hasan</title>
+
+    <link rel="shortcut icon" href="assets/fakibazz.png" type="image/x-icon">
+
+    <!-- GLOBAL + PAGE CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/projects.css">
+
+    <!-- ICONS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+<div class="main-container">
 
-    <header class="header">
-        <a href="index.html" class="logo">Nahid.</a>
+    <!-- ================= HEADER ================= -->
 
-        <nav class="navbar">
+    <header>
+
+        <div class="brand-info">
+            <img src="assets/fakibazz.png" alt="Logo">
+            <h2>Nahid Hasan</h2>
+        </div>
+
+        <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html" class="active">Projects</a>
@@ -26,6 +40,7 @@
             <a href="achievements.html">Achievements</a>
             <a href="contact.html">Contact</a>
         </nav>
+
     </header>
 
     <!-- ================= PROJECT SECTION ================= -->
@@ -33,10 +48,15 @@
     <section class="projects-section">
 
         <div class="section-title">
-            <h1>My <span>Projects</span></h1>
+
+            <!-- <h4>My Works</h4> -->
+
+            <h1>Featured <span>Projects</span></h1>
+
             <p>
                 Some of my featured projects, hackathon works and development experiments.
             </p>
+
         </div>
 
         <div class="projects-container">
@@ -46,126 +66,113 @@
             <div class="project-card">
 
                 <div class="project-image">
-                    <img src="images/skyglow.png" alt="SkyGlow Project">
+
+                    <img src="assets/Projects/Skyglow.png" alt="SkyGlow Project">
+
                 </div>
 
                 <div class="project-content">
 
                     <div class="project-top">
-                        <span class="project-category">NASA Space Apps Challenge 2025</span>
-                        <span class="project-status">Hackathon Project</span>
+
+                        <span class="project-category">
+                            NASA Space Apps Challenge 2025
+                        </span>
+
+                        <span class="project-status">
+                            Hackathon Project
+                        </span>
+
                     </div>
 
                     <h2>SkyGlow</h2>
 
                     <p class="project-description">
-                        An interactive storytelling platform designed to teach children about
-                        space weather through engaging stories, visuals and educational content.
-                        Developed for NASA Space Apps Challenge 2025.
+
+                        SkyGlow is an educational storytelling platform created for the
+                        NASA Space Apps Challenge 2025. The project teaches children
+                        about space weather through engaging stories, interactive visuals,
+                        atmospheric science and real-world impacts of solar activity.
+
                     </p>
+
+                    <!-- FEATURES -->
 
                     <div class="project-features">
 
                         <div class="feature">
                             <i class='bx bx-book-open'></i>
-                            <span>Interactive Storytelling</span>
-                        </div>
-
-                        <div class="feature">
-                            <i class='bx bx-world'></i>
-                            <span>Real-World Space Weather Impact</span>
+                            <span>Interactive Digital Storybook</span>
                         </div>
 
                         <div class="feature">
                             <i class='bx bx-sun'></i>
-                            <span>Solar Flare Perspective</span>
+                            <span>Solar Flare Journey Perspective</span>
                         </div>
 
                         <div class="feature">
-                            <i class='bx bx-brain'></i>
-                            <span>Educational Learning Experience</span>
+                            <i class='bx bx-world'></i>
+                            <span>Space Weather Real-World Effects</span>
+                        </div>
+
+                        <div class="feature">
+                            <i class='bx bx-bulb'></i>
+                            <span>Light Pollution & Skyglow Research</span>
+                        </div>
+
+                        <div class="feature">
+                            <i class='bx bx-child'></i>
+                            <span>Kid-Friendly Learning Experience</span>
+                        </div>
+
+                        <div class="feature">
+                            <i class='bx bx-rocket'></i>
+                            <span>NASA Challenge Innovation</span>
                         </div>
 
                     </div>
 
+                    <!-- TECH STACK -->
+
                     <div class="tech-stack">
+
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
-                        <span>Storytelling UI</span>
+                        <span>Interactive Storytelling</span>
+                        <span>Educational Platform</span>
+
                     </div>
+
+                    <!-- BUTTONS -->
 
                     <div class="project-buttons">
 
-                        <a href="https://nahid383.github.io/Skyglow/" target="_blank" class="btn">
+                        <a href="https://nahid383.github.io/Skyglow/"
+                           target="_blank"
+                           class="btn">
+
                             <i class='bx bx-link-external'></i>
                             Live Demo
+
                         </a>
 
-                    </div>
+                        <a href="https://github.com/nahid383/Skyglow"
+                           target="_blank"
+                           class="btn secondary-btn">
 
-                </div>
-
-            </div>
-
-            <!-- ================= TETRIS GAME ================= -->
-
-            <div class="project-card">
-
-                <div class="project-image">
-                    <img src="images/tetris.png" alt="Tetris Game">
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-top">
-                        <span class="project-category">Project 150</span>
-                        <span class="project-status">University Project</span>
-                    </div>
-
-                    <h2>Tetris Game</h2>
-
-                    <p class="project-description">
-                        A classic Tetris game developed as a university project during
-                        the 1/2 semester. Includes smooth controls, score tracking and
-                        responsive gameplay mechanics.
-                    </p>
-
-                    <div class="project-features">
-
-                        <div class="feature">
-                            <i class='bx bx-game'></i>
-                            <span>Classic Tetris Mechanics</span>
-                        </div>
-
-                        <div class="feature">
-                            <i class='bx bx-joystick'></i>
-                            <span>Interactive Gameplay</span>
-                        </div>
-
-                        <div class="feature">
-                            <i class='bx bx-trophy'></i>
-                            <span>Score System</span>
-                        </div>
-
-                        <div class="feature">
-                            <i class='bx bx-code-alt'></i>
-                            <span>Java Development Project</span>
-                        </div>
-
-                    </div>
-
-                    <div class="tech-stack">
-                        <span>Java</span>
-                        <span>Game Development</span>
-                        <span>OOP</span>
-                    </div>
-
-                    <div class="project-buttons">
-
-                        <a href="https://github.com/nahid383/Project-150" target="_blank" class="btn">
                             <i class='bx bxl-github'></i>
                             GitHub
+
+                        </a>
+
+                        <a href="https://www.figma.com/proto/BFLOsGBy0Hg8ljc0oHR3Yl/nasa-spce-app?page-id=0%3A1&node-id=11-69&viewport=251%2C322%2C0.63&t=Qdlsm2IpVYC6mp32-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=11%3A69&show-proto-sidebar=1"
+                           target="_blank"
+                           class="btn secondary-btn">
+
+                            <i class='bx bxl-figma'></i>
+                            Figma
+
                         </a>
 
                     </div>
@@ -179,39 +186,64 @@
             <div class="project-card">
 
                 <div class="project-image">
-                    <img src="images/mastermoshai.png" alt="Master Moshai">
+
+                    <img src="assets/Projects/master-moshai.png" alt="Master Moshai">
+
                 </div>
 
                 <div class="project-content">
 
                     <div class="project-top">
-                        <span class="project-category">MillionX Bangladesh AI Buildathon</span>
-                        <span class="project-status">AI Buildathon Project</span>
+
+                        <span class="project-category">
+                            MillionX Bangladesh AI Buildathon
+                        </span>
+
+                        <span class="project-status">
+                            AI Buildathon Project
+                        </span>
+
                     </div>
 
                     <h2>Master-Moshai</h2>
 
                     <p class="project-description">
-                        An AI-powered smart teacher platform that creates personalized learning
-                        experiences for students by analyzing weaknesses, tracking progress and
-                        providing intelligent guidance with emotional support.
+
+                        Master-Moshai is an AI-powered smart teacher platform built to
+                        solve educational inequality in Bangladesh. The system creates
+                        personalized learning experiences, analyzes student weaknesses,
+                        generates targeted practice and supports students academically
+                        and emotionally.
+
                     </p>
+
+                    <!-- FEATURES -->
 
                     <div class="project-features">
 
                         <div class="feature">
                             <i class='bx bx-brain'></i>
-                            <span>AI Study Routine</span>
+                            <span>Personalized AI Study Routine</span>
                         </div>
 
                         <div class="feature">
-                            <i class='bx bx-analyse'></i>
-                            <span>Weak Topic Detection</span>
+                            <i class='bx bx-search-alt'></i>
+                            <span>Weakness & Strength Analysis</span>
+                        </div>
+
+                        <div class="feature">
+                            <i class='bx bx-message-square-detail'></i>
+                            <span>AI Tutor & Instant Guidance</span>
                         </div>
 
                         <div class="feature">
                             <i class='bx bx-bar-chart-alt'></i>
-                            <span>Progress Dashboard</span>
+                            <span>Progress Tracking Dashboard</span>
+                        </div>
+
+                        <div class="feature">
+                            <i class='bx bx-edit'></i>
+                            <span>Online & Offline Exam Modes</span>
                         </div>
 
                         <div class="feature">
@@ -221,28 +253,47 @@
 
                     </div>
 
+                    <!-- TECH STACK -->
+
                     <div class="tech-stack">
+
                         <span>AI</span>
-                        <span>Education</span>
-                        <span>Dashboard</span>
+                        <span>Education Technology</span>
+                        <span>Dashboard System</span>
                         <span>Figma</span>
+                        <span>Smart Learning</span>
+
                     </div>
+
+                    <!-- BUTTONS -->
 
                     <div class="project-buttons">
 
-                        <a href="https://mastermoshai-millionxbangladesh-fakibazz.lovable.app/" target="_blank" class="btn">
+                        <a href="https://mastermoshai-millionxbangladesh-fakibazz.lovable.app/"
+                           target="_blank"
+                           class="btn">
+
                             <i class='bx bx-link-external'></i>
                             Live Demo
+
                         </a>
 
-                        <a href="https://github.com/nahid383/master-moshai" target="_blank" class="btn secondary-btn">
+                        <a href="https://github.com/nahid383/master-moshai"
+                           target="_blank"
+                           class="btn secondary-btn">
+
                             <i class='bx bxl-github'></i>
                             GitHub
+
                         </a>
 
-                        <a href="https://www.figma.com/design/l0Ko6lcFvI32KXOfkxzD8x/millionX" target="_blank" class="btn secondary-btn">
+                        <a href="https://www.figma.com/design/l0Ko6lcFvI32KXOfkxzD8x/millionX"
+                           target="_blank"
+                           class="btn secondary-btn">
+
                             <i class='bx bxl-figma'></i>
                             Figma
+
                         </a>
 
                     </div>
@@ -255,7 +306,12 @@
 
     </section>
 
-    <script src="projects.js"></script>
+</div>
+
+<!-- ================= SCRIPT ================= -->
+
+<script src="projects.js"></script>
 
 </body>
+
 </html>
