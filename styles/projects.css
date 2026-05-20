@@ -1,0 +1,264 @@
+/* ================= PROJECT PAGE ================= */
+
+.projects-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 5rem 7%;
+    color: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-title h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.section-title h1 span {
+    color: var(--green);
+}
+
+.section-title p {
+    color: #b5b5b5;
+    font-size: 1.1rem;
+}
+
+/* ================= PROJECT CONTAINER ================= */
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* ================= PROJECT CARD ================= */
+
+.project-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0,255,136,0.15);
+
+    padding: 2rem;
+    border-radius: 30px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--green);
+    box-shadow: 0 0 30px rgba(0,255,136,0.2);
+}
+
+/* ================= IMAGE ================= */
+
+.project-image {
+    flex: 1;
+    min-width: 320px;
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.03);
+}
+
+/* ================= CONTENT ================= */
+
+.project-content {
+    flex: 1.2;
+}
+
+.project-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+.project-category,
+.project-status {
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-category {
+    background: rgba(0,255,136,0.12);
+    color: var(--green);
+}
+
+.project-status {
+    background: rgba(255,255,255,0.08);
+    color: white;
+}
+
+.project-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #d5d5d5;
+    margin-bottom: 2rem;
+}
+
+/* ================= FEATURES ================= */
+
+.project-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    background: rgba(255,255,255,0.04);
+    padding: 1rem;
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.feature:hover {
+    background: rgba(0,255,136,0.08);
+    transform: translateY(-3px);
+}
+
+.feature i {
+    color: var(--green);
+    font-size: 1.4rem;
+}
+
+/* ================= TECH STACK ================= */
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+}
+
+.tech-stack span {
+    padding: 0.7rem 1.1rem;
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    font-size: 0.9rem;
+}
+
+/* ================= BUTTONS ================= */
+
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.9rem 1.5rem;
+
+    border-radius: 40px;
+
+    background: var(--green);
+    color: black;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0,255,136,0.5);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-image {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .section-title h1 {
+        font-size: 3rem;
+    }
+
+    .project-content h2 {
+        font-size: 2rem;
+    }
+
+    .project-features {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-section {
+        padding: 4rem 5%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+    }
+
+}
