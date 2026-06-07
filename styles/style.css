@@ -8,7 +8,7 @@
     --white: #ffffff;
 }
 
-/* RESET */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@ body {
     overflow-x: hidden;
 }
 
-/* MAIN CONTAINER */
+/* ================= MAIN CONTAINER ================= */
 .main-container {
     width: 100%;
     min-height: 100vh;
@@ -36,7 +36,7 @@ body {
     flex-direction: column;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header {
     display: flex;
     align-items: center;
@@ -44,12 +44,12 @@ header {
     padding: 10px 0;
     position: sticky;
     top: 0;
+    z-index: 1000;
     backdrop-filter: blur(10px);
     background: rgba(3, 10, 22, 0.6);
-    z-index: 1000;
 }
 
-/* BRAND */
+/* ================= BRAND ================= */
 .brand-info {
     display: flex;
     align-items: center;
@@ -61,6 +61,7 @@ header {
     height: 65px;
     border-radius: 50%;
     border: 2px solid var(--green);
+    object-fit: cover;
 }
 
 .brand-info h2 {
@@ -68,7 +69,7 @@ header {
     font-weight: 800;
 }
 
-/* NAV */
+/* ================= NAVIGATION ================= */
 nav {
     display: flex;
     gap: 2rem;
@@ -78,7 +79,7 @@ nav {
 nav a {
     text-decoration: none;
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 600;
     position: relative;
     transition: 0.3s ease;
@@ -103,25 +104,30 @@ nav a.active::after {
     background: var(--green);
 }
 
-/* HERO SECTION */
+/* ================= HERO SECTION ================= */
 .hero-section {
+    flex: 1;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 4rem;
-    gap: 3rem;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 1rem;
+    padding-top: 2rem;
 }
 
-/* DETAILS */
+/* ================= DETAILS ================= */
 .details {
     flex: 1;
-    min-width: 300px;
+    min-width: 0;
+    max-width: 60%;
+    margin-top: -1rem;
 }
 
+/* NAME */
 .details h2 {
-    font-size: 3.4rem;
+    font-size: 4.5rem;
     line-height: 1.1;
+    margin-bottom: 10px;
 }
 
 .details h2 span {
@@ -131,20 +137,24 @@ nav a.active::after {
     border-bottom: 4px solid var(--green);
 }
 
+/* TITLE */
 .details h3 {
     font-size: 2.4rem;
     margin-top: 10px;
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
+/* typing text */
 .details h3 span {
     color: var(--green);
     min-width: 140px;
     white-space: nowrap;
 }
 
+/* cursor */
 .details h3 span::after {
     content: "|";
     margin-left: 5px;
@@ -152,23 +162,24 @@ nav a.active::after {
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
-/* ⭐ FIXED PARAGRAPH (RESTORED ORIGINAL LOOK) */
+/* DESCRIPTION */
 .details p {
-    margin-top: 15px;
-    font-size: 1.5rem;
+    margin-top: 18px;
+    font-size: 1.12rem;
     line-height: 1.8;
-    max-width: 850px;
+    max-width: 750px;
     text-align: justify;
     color: #cfd3dc;
-    word-spacing: 0.5px;
 }
 
-/* BUTTON + SOCIAL */
+/* ================= BUTTON + SOCIAL ================= */
 .bottom {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     align-items: center;
     gap: 25px;
@@ -177,9 +188,9 @@ nav a.active::after {
 
 /* BUTTON */
 .btn {
-    width: 14rem;
-    padding: 1rem 0;
-    font-size: 1.4rem;
+    width: 13rem;
+    padding: 0.95rem 0;
+    font-size: 1.15rem;
     font-weight: 700;
     border-radius: 10px;
     background-color: var(--green);
@@ -196,15 +207,15 @@ nav a.active::after {
     transform: translateY(-3px);
 }
 
-/* SOCIAL ICONS */
+/* ================= SOCIAL ICONS ================= */
 .social-icons {
     display: flex;
     gap: 18px;
 }
 
 .social-icons a {
-    width: 55px;
-    height: 55px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     border: 2px solid var(--green);
     color: var(--green);
@@ -216,39 +227,29 @@ nav a.active::after {
 }
 
 .social-icons a i {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 .social-icons a:hover {
     background: var(--green);
     color: var(--primary);
-    transform: scale(1.15);
+    transform: scale(1.12);
 }
 
-/* ================= PROFILE IMAGE (FINAL FIXED VERSION) ================= */
+/* ================= PROFILE IMAGE ================= */
 .img-container {
-    width: 340px;
-    height: 340px;
+    width: 380px;
+    height: 380px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 3rem;
 }
 
-
-/* ================= PROFILE IMAGE CONTAINER ================= */
-.img-container {
-    width: 340px;
-    height: 340px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
-/* ================= OUTER CURVE (TOP START) ================= */
+/* OUTER CURVE */
 .img-container::before {
     content: "";
     position: absolute;
@@ -261,10 +262,9 @@ nav a.active::after {
         var(--green) 360deg
     );
     animation: spin 3.5s linear infinite;
-    opacity: 1;
 }
 
-/* ================= INNER CURVE (BOTTOM START) ================= */
+/* INNER CURVE */
 .img-container::after {
     content: "";
     position: absolute;
@@ -277,10 +277,9 @@ nav a.active::after {
         var(--green) 360deg
     );
     animation: spin 3.5s linear infinite;
-    opacity: 1;
 }
 
-/* ================= PROFILE IMAGE ================= */
+/* PROFILE IMAGE */
 .img-container img {
     width: 92%;
     height: 92%;
@@ -290,14 +289,53 @@ nav a.active::after {
     z-index: 10;
 }
 
-/* ================= ANIMATION (SAME SPEED + SAME DIRECTION) ================= */
+/* SPIN ANIMATION */
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-/* MOBILE */
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+
+    .hero-section {
+        gap: 3rem;
+    }
+
+    .details {
+        max-width: 100%;
+    }
+
+    .details h2 {
+        font-size: 3.5rem;
+    }
+
+    .details h3 {
+        font-size: 2rem;
+    }
+
+    .details p {
+        font-size: 1rem;
+    }
+
+    .img-container {
+        width: 320px;
+        height: 320px;
+        margin-right: 0;
+    }
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
+    .main-container {
+        padding: 1rem 5%;
+    }
 
     header {
         flex-direction: column;
@@ -305,41 +343,67 @@ nav a.active::after {
     }
 
     nav {
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
     }
 
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
+    nav a {
+        font-size: 1.1rem;
     }
 
-    .img-container {
-        width: 220px;
-        height: 220px;
-        order: -1;
+    .hero-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .details {
+        max-width: 100%;
+        margin-top: 0;
     }
 
     .details h2 {
-        font-size: 1.9rem;
+        font-size: 2.4rem;
+    }
+
+    .details h3 {
+        font-size: 1.5rem;
+        justify-content: center;
     }
 
     .details p {
+        font-size: 0.95rem;
         text-align: center;
     }
 
     .bottom {
         justify-content: center;
     }
-}
 
-@media (min-width: 1024px) {
+    .btn {
+        width: 11rem;
+        font-size: 1rem;
+    }
 
-    .hero-section {
-        justify-content: space-between;
+    .social-icons a {
+        width: 46px;
+        height: 46px;
+    }
+
+    .social-icons a i {
+        font-size: 1.3rem;
     }
 
     .img-container {
-        transform: translateX(-80px);
+        width: 240px;
+        height: 240px;
+        margin-right: 0;
+    }
+
+    .brand-info h2 {
+        font-size: 1.3rem;
     }
 }
